@@ -18,7 +18,7 @@ app.use('/api/V1/tasks', tasks)
 app.use(notFound)
 app.use(errorHandleMiddleware)
 
-const port = 3000
+const port = process.env.PORT || 8080
   const start =  async () => {
       try {
           await connectDB( 'mongodb+srv://dommy:dommy2021@cluster0.wr5fv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
